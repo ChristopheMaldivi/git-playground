@@ -60,3 +60,48 @@ Merge made by the 'recursive' strategy.
  1 file changed, 2 insertions(+)
 
 
+3.) final state
+
+➜  git_pull_master_merge_trial git:(master) git log -10 --graph --decorate
+* commit 82732c7 (HEAD -> master, origin/master)
+| Author: Christophe Maldivi <christophe.maldivi@orange.com>
+| Date:   Sat May 5 22:18:46 2018 +0200
+| 
+|     doc update
+| 
+* commit 40f120a
+| Author: Christophe Maldivi <christophe.maldivi@orange.com>
+| Date:   Sat May 5 22:16:36 2018 +0200
+| 
+|     add doc
+|   
+*   commit e459490
+|\  Merge: 2bbe2b2 b2bacb2
+| | Author: Christophe Maldivi <christophe.maldivi@orange.com>
+| | Date:   Sat May 5 22:03:29 2018 +0200
+| | 
+| |     Merge branch 'master' of github.com:ChristopheMaldivi/git-playground
+| | 
+| * commit b2bacb2
+| | Author: Christophe Maldivi <christophe.maldivi@orange.com>
+| | Date:   Sat May 5 21:53:11 2018 +0200
+| | 
+| |     simulate modif on origin 2
+| | 
+| * commit 25bf024
+| | Author: Christophe Maldivi <christophe.maldivi@orange.com>
+| | Date:   Sat May 5 21:52:55 2018 +0200
+| | 
+| |     simulate modif on origin 1
+| | 
+* | commit 2bbe2b2
+|/  Author: Christophe Maldivi <christophe.maldivi@orange.com>
+|   Date:   Sat May 5 21:54:58 2018 +0200
+|   
+|       local modif, not synced with origin master which was modified
+| 
+* commit 3ae68c8
+  Author: Christophe Maldivi <christophe.maldivi@orange.com>
+  Date:   Sat May 5 21:51:08 2018 +0200
+  
+      first commit
