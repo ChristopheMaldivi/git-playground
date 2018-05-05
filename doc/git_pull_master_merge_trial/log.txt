@@ -1,0 +1,62 @@
+1.) setup before doing `git pull` on repo `git-playground2`
+
+➜  git-playground git:(master) ss        
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+➜  git-playground git:(master) git log -3
+commit b2bacb2 (HEAD -> master, origin/master)
+Author: Christophe Maldivi <christophe.maldivi@orange.com>
+Date:   Sat May 5 21:53:11 2018 +0200
+
+    simulate modif on origin 2
+
+commit 25bf024
+Author: Christophe Maldivi <christophe.maldivi@orange.com>
+Date:   Sat May 5 21:52:55 2018 +0200
+
+    simulate modif on origin 1
+
+commit 3ae68c8
+Author: Christophe Maldivi <christophe.maldivi@orange.com>
+Date:   Sat May 5 21:51:08 2018 +0200
+
+    first commit
+==========================================================
+
+
+➜  git-playground2 git:(master) ss
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+➜  git-playground2 git:(master) git log -2
+commit 2bbe2b2 (HEAD -> master)
+Author: Christophe Maldivi <christophe.maldivi@orange.com>
+Date:   Sat May 5 21:54:58 2018 +0200
+
+    local modif, not synced with origin master which was modified
+
+commit 3ae68c8 (origin/master)
+Author: Christophe Maldivi <christophe.maldivi@orange.com>
+Date:   Sat May 5 21:51:08 2018 +0200
+
+    first commit
+
+
+2.) `git pull --rebase=false`
+
+➜  git-playground2 git:(master) git pull --rebase=false      
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 6 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+From github.com:ChristopheMaldivi/git-playground
+   3ae68c8..b2bacb2  master     -> origin/master
+Merge made by the 'recursive' strategy.
+ README.MD | 2 ++
+ 1 file changed, 2 insertions(+)
+
+
